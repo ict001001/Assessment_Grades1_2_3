@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Rowad International Schools — Grades 1–3 Parent Assessment Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#101A33;
+    --navy-deep:#0A1226;
+    --paper:#FBF7EE;
+    --paper-dim:#F1EAD9;
+    --ink:#1B2438;
+    --slate:#5B6B8C;
+    --gold:#E3A94D;
+    --grey:#8A93A6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--navy);
+    color:var(--paper);
+    font-family:'Public Sans', sans-serif;
+    line-height:1.5;
+  }
+  h1,h2,h3{font-family:'Fraunces', serif;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:48px 6vw 24px;
+    background:radial-gradient(ellipse at top left, #17244A 0%, var(--navy) 55%);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-bottom:20px;
+  }
+  .logo-wrapper{
+    display:flex;
+    align-items:center;
+    background:#ffffff;
+    padding:10px 18px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:12.5px;
+    color:var(--gold);
+  }
+  .hero h1{
+    font-size:clamp(32px,5vw,56px);
+    font-weight:700;
+    margin:0 0 14px;
+    max-width:20ch;
+    color:#fff;
+  }
+  .hero p{
+    max-width:65ch;
+    color:#C7CEDE;
+    font-size:17px;
+    margin:0 0 8px;
+  }
+
+  /* ---------- CURVE NAV (3 NODES) ---------- */
+  .curve-section{
+    padding:24px 4vw 40px;
+    background:var(--navy);
+  }
+  .curve-svg-wrap{
+    max-width:900px;
+    margin:0 auto;
+    position:relative;
+  }
+  .curve-svg-wrap svg{width:100%;height:auto;display:block;}
+  .node{cursor:pointer;}
+  .node circle{transition:r .15s ease, filter .15s ease;}
+  .node:hover circle{filter:brightness(1.3);}
+  .node text{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    fill:#C7CEDE;
+  }
+
+  /* ---------- CONTENT SECTIONS ---------- */
+  .content-container{
+    background:var(--paper);
+    color:var(--ink);
+    padding:48px 6vw 64px;
+  }
+  
+  .section-block{
+    background:#fff;
+    border:1px solid #EAE2CC;
+    border-radius:12px;
+    padding:28px;
+    margin-bottom:32px;
+    scroll-margin-top:20px;
+  }
+
+  .section-block h2{
+    font-size:26px;
+    margin:0 0 16px;
+    color:var(--navy);
+    border-bottom:2px solid var(--paper-dim);
+    padding-bottom:10px;
+  }
+
+  .sub-heading{
+    font-size:18px;
+    font-weight:700;
+    color:var(--navy);
+    margin:20px 0 10px;
+  }
+
+  /* Tables */
+  .table-container{
+    overflow-x:auto;
+    margin-top:16px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    text-align:left;
+    font-size:14px;
+  }
+  th, td{
+    padding:12px 16px;
+    border-bottom:1px solid #F1EAD9;
+  }
+  th{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    color:var(--slate);
+    background:var(--paper-dim);
+  }
+
+  /* Timeline Details */
+  .week-card{
+    border-bottom:1px solid #F1EAD9;
+    padding:12px 0;
+  }
+  .week-card:last-child{border-bottom:none;}
+  .week-head{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .week-num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    background:var(--navy);
+    color:#fff;
+    padding:2px 8px;
+    border-radius:4px;
+  }
+  .week-title{font-weight:600;}
+  .week-body{
+    font-size:14px;
+    color:var(--slate);
+    margin-top:4px;
+    padding-left:56px;
+  }
+
+  footer{
+    background:var(--navy-deep);
+    color:var(--grey);
+    padding:32px 6vw;
+    font-size:13px;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="header-top">
+    <div class="eyebrow">Al-Rowad International Schools · Grades 1–3</div>
+    <div class="logo-wrapper">
+      <svg width="260" height="55" viewBox="0 0 260 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Arabic Text -->
+        <text x="10" y="26" fill="#1d488a" font-family="'Amiri', 'Traditional Arabic', serif" font-size="22" font-weight="bold">مدارس الرواد العالمية</text>
+        <!-- English Subtext -->
+        <text x="10" y="42" fill="#3b72b8" font-family="'Public Sans', sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.5">AL-ROWAD INTERNATIONAL SCHOOLS</text>
+        
+        <!-- Emblem Outer Star -->
+        <g transform="translate(225, 27) scale(0.9)">
+          <polygon points="0,-26 7,-18 18,-18 18,-7 26,0 18,7 18,18 7,18 0,26 -7,18 -18,18 -18,7 -26,0 -18,-7 -18,-18 -7,-18" fill="#1d488a" stroke="#ffffff" stroke-width="1.5"/>
+          <polygon points="0,-23 6,-16 16,-16 16,-6 23,0 16,6 16,16 6,16 0,23 -6,16 -16,16 -16,6 -23,0 -16,-6 -16,-16 -6,-16" fill="none" stroke="#ffffff" stroke-width="1"/>
+          
+          <!-- Globe -->
+          <circle cx="0" cy="0" r="14" fill="#3b72b8"/>
+          <!-- Continents -->
+          <path d="M-8,-2 C-6,-8 0,-12 4,-10 C7,-8 6,-3 2,-1 C-2,1 -3,6 -7,5 Z" fill="#e0a93b"/>
+          <path d="M2,2 C5,1 10,4 8,9 C5,12 0,11 1,6 Z" fill="#e0a93b"/>
+          
+          <!-- Curved Text Ring Placeholder -->
+          <circle cx="0" cy="0" r="13" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2,2"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <h1>Parent Assessment Guide</h1>
+  <p>Overview of the 2026–27 academic calendar, evaluation criteria, and homework/classwork policies for Grades 1–3.</p>
+</header>
+
+<section class="curve-section">
+  <div class="curve-svg-wrap">
+    <svg id="curveSvg" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+</section>
+
+<div class="content-container">
+
+  <!-- NODE 1: CALENDAR -->
+  <section class="section-block" id="node-calendar">
+    <h2>1. Academic Calendar (2026–2027)</h2>
+    
+    <div class="sub-heading">Semester 1</div>
+    <div id="calendar-list-s1">
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W1</span><span class="week-title">Aug 23, 2026 — Welcome Back & Induction</span></div>
+        <div class="week-body">• Welcome Back - Grades 1-3 return on Sunday, Aug 23, 2026<br>• Monday, Aug 23: Parents' Induction Session</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W3–W5</span><span class="week-title">Sep 6 – Sep 20, 2026 — Quarter 1 Quizzes & Baseline Testing</span></div>
+        <div class="week-body">• Meet and Greet & Baseline Test Assessment (W3)<br>• Quiz 1 for English & Math (W3)<br>• Quiz 1 for Science (W4)<br>• Quiz 1 for ISA/ISE, Computer, and Arabic (W5)<br>• National Day celebration: Vacation Sep 23 & 24, 2026 (W5)</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W6–W9</span><span class="week-title">Sep 27 – Oct 18, 2026 — Quarter 1 Quizzes & Quarter 1 End</span></div>
+        <div class="week-body">• Quiz 2 for English, Math, and Science (W6)<br>• Quiz 2 for ISA/ISE, Computer, and Arabic (W7)<br>• Quiz 2 for Science (W8)<br>• Make-up Quizzes & End of Quarter 1 (W9)</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W10–W13</span><span class="week-title">Oct 25 – Nov 15, 2026 — Reports, PTC & Quarter 2 Quizzes</span></div>
+        <div class="week-body">• Sunday, Oct 25: Additional Holiday<br>• Issue of Report Card on Thursday, Oct 29, 2026<br>• Parent-Teacher Conference: Wednesday & Thursday (W11)<br>• Grades 1 & 2 Quiz 1 for English & Math (W11)<br>• Grades 1 & 2 Quiz 1 for ISA/ISE, Computer, Arabic (W12)<br>• Grades 1 & 2 Quiz 1 for Science (W13)</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W14–W18</span><span class="week-title">Nov 22 – Dec 20, 2026 — Autumn Break & Quarter 2 Assessments</span></div>
+        <div class="week-body">• Autumn Break (W14)<br>• Sunday, Nov 29: Additional Holiday; School Resumes Monday, Nov 30 (W15)<br>• Grades 1 & 2 Quiz 2 for English & Math / Grade 3 Quiz 1 for English & Math (W16)<br>• Quiz 1 for ISA/ISE, Computer, Arabic (W17)<br>• Grades 1 & 2 Quiz 2 for Science / Grade 3 Quiz 1 for Science & Make-up Quizzes (W18)</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W20–W22</span><span class="week-title">Jan 3 – Jan 17, 2027 — Semester 1 Final Exams & Break</span></div>
+        <div class="week-body">• Semester 1 Final Exams Start Sunday, Jan 3, 2027 (W20)<br>• Mid-Year Break (W21)<br>• Second Semester Starts Jan 17, 2027 (W22)</div>
+      </div>
+    </div>
+
+    <div class="sub-heading" style="margin-top:32px;">Semester 2</div>
+    <div id="calendar-list-s2">
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W1–W6</span><span class="week-title">Jan 17 – Feb 21, 2027 — Semester 2 Start, Ramadan & Founding Day</span></div>
+        <div class="week-body">• Second Semester Starts Jan 17 (W1)<br>• Quiz 1 for English & Math, Quarter 3 (W3)<br>• Ramadan Starts Feb 8, 2027 / Quiz 1 for ISA/ISE, Computer, Arabic, Quarter 3 (W4)<br>• Saudi Founding Day / Quiz 1 for Science, Quarter 3 (W5)<br>• Vacation Feb 19–22; School Resumes Tuesday, Feb 23 / Quiz 1 for ISA/ISE, Computer, Arabic (W6)</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W7–W9</span><span class="week-title">Feb 28 – Mar 14, 2027 — Eid Al-Fitr Holiday</span></div>
+        <div class="week-body">• Eid Al-Fitr Holiday (W7–W8)<br>• School Resumes Mar 14, 2027 (W9)</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W10–W12</span><span class="week-title">Mar 21 – Apr 4, 2027 — Quarter 3 Quizzes, Reports & PTC</span></div>
+        <div class="week-body">• Quiz 2 for English & Math, Quarter 3 (W10)<br>• Quiz 2 for Science, Quarter 3 & End of Quarter 3 (W11)<br>• Issuing Report Cards on Sunday, Apr 4 / Parent-Teacher Conference Tuesday to Thursday (W12)</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W13–W18</span><span class="week-title">Apr 11 – May 16, 2027 — Quarter 4 Quizzes & Eid Al-Adha</span></div>
+        <div class="week-body">• Sunday, Apr 11: Additional Holiday / Quiz 1 for ISA/ISE, Computer, Arabic, Quarter 4 (W13)<br>• Quiz 1 for English & Math, Quarter 4 (W14)<br>• Quiz 1 for Science, Quarter 4 (W15)<br>• Eid Al-Adha Holiday (W17–W18)</div>
+      </div>
+      <div class="week-card">
+        <div class="week-head"><span class="week-num">W19–W23</span><span class="week-title">May 23 – Jun 20, 2027 — Semester 2 Finals & Year End</span></div>
+        <div class="week-body">• School Resumes May 23 (W19)<br>• Grades 1 & 2 Quiz 2 for ISA/ISE, Computer, Arabic, Quarter 4 (W20)<br>• Grades 1 & 2 Quiz 2 for English, Math, Science, Quarter 4 (W21)<br>• Semester 2 Exams Begin Sunday, Jun 6 and End Tuesday, Jun 15, 2027 for Grade 3 (W21–W22)<br>• End-of-Year Break begins Jun 24, 2027 (W23)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NODE 2: ASSESSMENT BREAKDOWN -->
+  <section class="section-block" id="node-assessment">
+    <h2>2. Assessment Breakdown</h2>
+    
+    <div class="sub-heading">Grades 1–3 Assessment Structure</div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Assessment Category</th>
+            <th>Quarters 1 & 3 Weight</th>
+            <th>Quarters 2 & 4 Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Classwork</strong></td><td>2.5 Marks</td><td>2.5 Marks</td></tr>
+          <tr><td><strong>Homework</strong></td><td>2.5 Marks</td><td>2.5 Marks</td></tr>
+          <tr><td><strong>Quiz</strong></td><td>10 Marks</td><td>10 Marks</td></tr>
+          <tr><td><strong>Mid-Term Test</strong></td><td>10 Marks</td><td>—</td></tr>
+          <tr><td><strong>Final Examination</strong></td><td>—</td><td>10 Marks</td></tr>
+          <tr><td><strong>Total Marks</strong></td><td><strong>25 Marks</strong></td><td><strong>25 Marks</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- NODE 3: NUMBER OF CLASSWORK & HOMEWORK -->
+  <section class="section-block" id="node-work">
+    <h2>3. Number of Formative Assessments</h2>
+    <p style="font-size:14px; color:var(--slate);">Number of formative assessments per quarter by subject for Grades 1–3:</p>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Graded Quizzes</th>
+            <th>Homework Frequency / Week</th>
+            <th>Graded Classwork</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Islamic Studies</strong></td>
+            <td>2 Quizzes per quarter</td>
+            <td>2 per week</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>Arabic</strong></td>
+            <td>2 Quizzes per quarter</td>
+            <td>3 per week</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>Social Studies / History</strong></td>
+            <td>2 Quizzes per quarter</td>
+            <td>1 per week</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>English</strong></td>
+            <td>2 Quizzes per quarter</td>
+            <td>3 per week</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>Mathematics</strong></td>
+            <td>2 Quizzes per quarter</td>
+            <td>3 per week</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>Science</strong></td>
+            <td>2 Quizzes per quarter</td>
+            <td>3 per week</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>Computer Science / ICT</strong></td>
+            <td>2 Quizzes per quarter</td>
+            <td>1 per week</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>Art</strong></td>
+            <td>—</td>
+            <td>—</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><strong>Physical Education</strong></td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px; color:var(--slate); margin-top:12px;"><em>Note: Classwork includes review of work done in class or flipped classroom.</em></p>
+  </section>
+
+</div>
+
+<footer>
+  <p>Al-Rowad International Schools — Grades 1–3 Parent Information Guide</p>
+</footer>
+
+<script>
+const nodes = [
+  { id: 'node-calendar', label: 'Calendar', x: 150, y: 75 },
+  { id: 'node-assessment', label: 'Assessment Breakdown', x: 400, y: 40 },
+  { id: 'node-work', label: 'Classwork & Homework', x: 650, y: 75 }
+];
+
+function renderCurve() {
+  const svg = document.getElementById('curveSvg');
+  let html = `<path d="M ${nodes[0].x} ${nodes[0].y} Q 275 20, ${nodes[1].x} ${nodes[1].y} T ${nodes[2].x} ${nodes[2].y}" fill="none" stroke="#2A3B66" stroke-width="3"/>`;
+
+  nodes.forEach((n) => {
+    html += `
+      <g class="node" onclick="scrollToSection('${n.id}')" transform="translate(${n.x},${n.y})">
+        <circle r="9" fill="#E3A94D"/>
+        <text x="0" y="28" text-anchor="middle">${n.label}</text>
+      </g>`;
+  });
+
+  svg.innerHTML = html;
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if(el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+renderCurve();
+</script>
+
+</body>
+</html>
